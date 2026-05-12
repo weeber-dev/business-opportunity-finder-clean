@@ -32,6 +32,36 @@ export default function Home() {
         </div>
 
       </nav>
+    
+      {/* Hero Section */}
+<section className="flex flex-col items-center justify-center text-center py-32 px-6">
+
+  <h1 className="text-6xl font-bold max-w-4xl leading-tight">
+    Find Local Businesses
+    <span className="text-green-400"> Missing Online Opportunities</span>
+  </h1>
+
+  <p className="text-gray-400 mt-6 max-w-2xl text-lg">
+    Discover businesses without websites, weak social media presence,
+    and untapped digital potential.
+  </p>
+
+  {/* Search Bar */}
+  <div className="flex items-center bg-gray-900 border border-gray-700 rounded-xl mt-10 overflow-hidden w-full max-w-2xl">
+
+    <input
+      type="text"
+      placeholder="Search gyms, salons, cafes..."
+      className="bg-transparent px-6 py-4 w-full outline-none text-white"
+    />
+
+    <button className="bg-green-500 hover:bg-green-600 px-8 py-4 font-semibold text-black">
+      Search
+    </button>
+
+  </div>
+
+</section>
 
     </main>
   );
