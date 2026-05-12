@@ -88,7 +88,60 @@ export default function Home() {
   </div>
 
 </section>
+{/* Business Cards Section */}
+<section className="px-8 py-20">
 
+  <h2 className="text-4xl font-bold mb-12 text-center">
+    Business Opportunities
+  </h2>
+
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+    {businesses.map((business, index) => (
+
+      <div
+        key={index}
+        className="bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-green-500 transition"
+      >
+
+        <h3 className="text-2xl font-semibold mb-4">
+          {business.name}
+        </h3>
+
+        <p className="mb-2">
+          Website:
+          <span className="ml-2 text-green-400">
+            {business.website ? "Available" : "Missing"}
+          </span>
+        </p>
+
+        <p className="mb-2">
+          Instagram:
+          <span className="ml-2 text-green-400">
+            {business.instagram ? "Available" : "Missing"}
+          </span>
+        </p>
+
+        <p className="mb-2">
+          Facebook:
+          <span className="ml-2 text-green-400">
+            {business.facebook ? "Available" : "Missing"}
+          </span>
+        </p>
+
+        <div className="mt-6">
+          <span className="bg-green-500 text-black px-4 py-2 rounded-lg font-bold">
+            Opportunity Score: {business.score}
+          </span>
+        </div>
+
+      </div>
+
+    ))}
+
+  </div>
+
+</section>
     </main>
   );
 }
