@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 const businesses = [
   {
     name: "Sharma Gym",
@@ -25,7 +28,11 @@ const businesses = [
 ];
 
 export default function Home() {
+ 
+  const [search, setSearch] = useState("");
+
   return (
+
     <main className="min-h-screen bg-black text-white">
 
       {/* Navbar */}
