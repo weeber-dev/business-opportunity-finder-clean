@@ -31,6 +31,10 @@ export default function Home() {
  
   const [search, setSearch] = useState("");
 
+  const filteredBusinesses = businesses.filter((business) =>
+  business.name.toLowerCase().includes(search.toLowerCase())
+);
+
   return (
 
     <main className="min-h-screen bg-black text-white">
@@ -84,44 +88,18 @@ export default function Home() {
   <div className="flex items-center bg-gray-900 border border-gray-700 rounded-xl mt-10 overflow-hidden w-full max-w-2xl">
 
     <input
-      type="text"
-      placeholder="Search gyms, salons, cafes..."
-      className="bg-transparent px-6 py-4 w-full outline-none text-white"
-    />
+  type="text"
+  placeholder="Search businesses..."
+  value={search}
+  onChange={(e) => setSearch(e.target.value)}
+  className="flex-1 px-6 py-4 rounded-l-xl bg-gray-900 border border-gray-700 text-white outline-none focus:border-green-500"
+/>
 
     <button className="bg-green-500 hover:bg-green-600 px-8 py-4 font-semibold text-black">
       Search
     </button>
 
   </div>
-{/* Search Section */}
-<section className="px-8 py-16">
-
-  <div className="max-w-4xl mx-auto">
-
-    <h2 className="text-4xl font-bold text-center mb-10">
-      Find Business Opportunities
-    </h2>
-
-    <div className="flex flex-col md:flex-row gap-4">
-
-      <input
-        type="text"
-        placeholder="Search businesses..."
-        className="flex-1 px-6 py-4 rounded-xl bg-gray-900 border border-gray-700 text-white outline-none focus:border-green-500"
-      />
-
-      <button
-        className="bg-green-500 hover:bg-green-400 text-black font-bold px-8 py-4 rounded-xl transition"
-      >
-        Search
-      </button>
-
-    </div>
-
-  </div>
-
-</section>
 </section>
 {/* Business Cards Section */}
 <section className="px-8 py-20">
@@ -130,9 +108,11 @@ export default function Home() {
     Business Opportunities
   </h2>
 
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-    {businesses.map((business, index) => (
+  {filteredBusinesses.length > 0 ? (
+
+    filteredBusinesses.map((business, index) => (
 
       <div
         key={index}
@@ -172,9 +152,25 @@ export default function Home() {
 
       </div>
 
-    ))}
+    ))
 
-  </div>
+  ) : (
+
+    <div className="col-span-full text-center py-20">
+
+      <h3 className="text-3xl font-bold text-gray-400 mb-4">
+        No Businesses Found
+      </h3>
+
+      <p className="text-gray-500">
+        Try searching with another keyword.
+      </p>
+
+    </div>
+
+  )}
+
+</div>
 
 </section>
 {/* Features Section */}
