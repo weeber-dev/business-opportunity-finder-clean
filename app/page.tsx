@@ -1,3 +1,29 @@
+const businesses = [
+  {
+    name: "Sharma Gym",
+    website: false,
+    instagram: false,
+    facebook: true,
+    score: 91,
+  },
+
+  {
+    name: "Royal Cafe",
+    website: true,
+    instagram: false,
+    facebook: false,
+    score: 78,
+  },
+
+  {
+    name: "Modern Salon",
+    website: false,
+    instagram: true,
+    facebook: false,
+    score: 85,
+  },
+];
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white">
