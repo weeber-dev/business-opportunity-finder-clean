@@ -109,69 +109,58 @@ export default function Home() {
   </h2>
 
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+    </div>
 
-  {filteredBusinesses.length > 0 ? (
+ {filteredBusinesses.length > 0 ? (
 
-    filteredBusinesses.map((business, index) => (
+  filteredBusinesses.map((business, index) => (
 
-      <div
-        key={index}
-        className="bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-green-500 transition"
-      >
+    <div
+      key={index}
+      className="bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-green-500 transition"
+    >
 
-        <h3 className="text-2xl font-semibold mb-4">
-          {business.name}
-        </h3>
-
-        <p className="mb-2">
-          Website:
-          <span className="ml-2 text-green-400">
-            {business.website ? "Available" : "Missing"}
-          </span>
-        </p>
-
-        <p className="mb-2">
-          Instagram:
-          <span className="ml-2 text-green-400">
-            {business.instagram ? "Available" : "Missing"}
-          </span>
-        </p>
-
-        <p className="mb-2">
-          Facebook:
-          <span className="ml-2 text-green-400">
-            {business.facebook ? "Available" : "Missing"}
-          </span>
-        </p>
-
-        <div className="mt-6">
-          <span className="bg-green-500 text-black px-4 py-2 rounded-lg font-bold">
-            Opportunity Score: {business.score}
-          </span>
-        </div>
-
-      </div>
-
-    ))
-
-  ) : (
-
-    <div className="col-span-full text-center py-20">
-
-      <h3 className="text-3xl font-bold text-gray-400 mb-4">
-        No Businesses Found
+      <h3 className="text-2xl font-semibold mb-4">
+        {business.name}
       </h3>
 
-      <p className="text-gray-500">
-        Try searching with another keyword.
+      <p className="mb-2">
+        Website:
+        <span className="ml-2 text-green-400">
+          {business.website ? "Available" : "Missing"}
+        </span>
       </p>
+
+      <p className="mb-2">
+        Instagram:
+        <span className="ml-2 text-green-400">
+          {business.instagram ? "Available" : "Missing"}
+        </span>
+      </p>
+
+      <p className="mb-4">
+        Facebook:
+        <span className="ml-2 text-green-400">
+          {business.facebook ? "Available" : "Missing"}
+        </span>
+      </p>
+
+      <div className="inline-block bg-green-500 text-black px-4 py-2 rounded-xl font-bold">
+        Opportunity Score: {business.score}
+      </div>
 
     </div>
 
-  )}
+  ))
 
-</div>
+) : (
 
+  <div className="col-span-full text-center text-gray-400 text-xl">
+    No businesses found
+  </div>
+
+)}
 </section>
 {/* Features Section */}
 <section className="px-8 py-24 bg-gray-950">
