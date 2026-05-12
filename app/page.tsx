@@ -1,35 +1,38 @@
-const businesses = [
-  {
-    name: "Sharma Gym",
-    website: false,
-    instagram: false,
-    facebook: true,
-    score: 91
-  }
-];
-
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white p-10">
-      <h1 className="text-4xl font-bold mb-8">
-        Business Opportunity Finder 🚀
-      </h1>
+    <main className="min-h-screen bg-black text-white">
 
-      <div className="border border-gray-700 p-6 rounded-xl max-w-md">
-        <h2 className="text-2xl font-semibold mb-4">
-          {businesses[0].name}
-        </h2>
+      {/* Navbar */}
+      <nav className="flex items-center justify-between px-8 py-4 border-b border-gray-800">
 
-        <p>Website: {businesses[0].website ? "Yes" : "No"}</p>
+        {/* Logo */}
+        <h1 className="text-2xl font-bold text-green-400">
+          BizFinder
+        </h1>
 
-        <p>Instagram: {businesses[0].instagram ? "Yes" : "No"}</p>
+        {/* Menu */}
+        <div className="flex gap-6 text-gray-300">
 
-        <p>Facebook: {businesses[0].facebook ? "Yes" : "No"}</p>
+          <a href="#" className="hover:text-white">
+            Home
+          </a>
 
-        <p className="mt-4 text-green-400">
-          Opportunity Score: {businesses[0].score}
-        </p>
-      </div>
+          <a href="#" className="hover:text-white">
+            Features
+          </a>
+
+          <a href="#" className="hover:text-white">
+            About
+          </a>
+
+          <a href="#" className="hover:text-white">
+            Contact
+          </a>
+
+        </div>
+
+      </nav>
+
     </main>
   );
 }
