@@ -142,6 +142,69 @@ export default function Home() {
   </div>
 
 </section>
+{/* Features Section */}
+<section className="px-8 py-24 bg-gray-950">
+
+  <h2 className="text-4xl font-bold text-center mb-16">
+    Powerful Features
+  </h2>
+
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+    {/* Feature 1 */}
+    <div className="bg-gray-900 border border-gray-800 rounded-2xl p-8 hover:border-green-500 transition">
+
+      <div className="text-5xl mb-6">
+        ⚡
+      </div>
+
+      <h3 className="text-2xl font-semibold mb-4">
+        Fast Business Search
+      </h3>
+
+      <p className="text-gray-400">
+        Instantly search local businesses and discover hidden digital opportunities.
+      </p>
+
+    </div>
+
+    {/* Feature 2 */}
+    <div className="bg-gray-900 border border-gray-800 rounded-2xl p-8 hover:border-green-500 transition">
+
+      <div className="text-5xl mb-6">
+        📱
+      </div>
+
+      <h3 className="text-2xl font-semibold mb-4">
+        Social Media Detection
+      </h3>
+
+      <p className="text-gray-400">
+        Detect missing Instagram, Facebook, and online presence automatically.
+      </p>
+
+    </div>
+
+    {/* Feature 3 */}
+    <div className="bg-gray-900 border border-gray-800 rounded-2xl p-8 hover:border-green-500 transition">
+
+      <div className="text-5xl mb-6">
+        📈
+      </div>
+
+      <h3 className="text-2xl font-semibold mb-4">
+        Opportunity Scoring
+      </h3>
+
+      <p className="text-gray-400">
+        Analyze business potential using smart opportunity scoring logic.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
     </main>
   );
 }
