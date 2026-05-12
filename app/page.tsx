@@ -60,6 +60,7 @@ export default function Home() {
       </nav>
     
       {/* Hero Section */}
+
 <section className="flex flex-col items-center justify-center text-center py-32 px-6">
 
   <h1 className="text-6xl font-bold max-w-4xl leading-tight">
@@ -86,7 +87,34 @@ export default function Home() {
     </button>
 
   </div>
+{/* Search Section */}
+<section className="px-8 py-16">
 
+  <div className="max-w-4xl mx-auto">
+
+    <h2 className="text-4xl font-bold text-center mb-10">
+      Find Business Opportunities
+    </h2>
+
+    <div className="flex flex-col md:flex-row gap-4">
+
+      <input
+        type="text"
+        placeholder="Search businesses..."
+        className="flex-1 px-6 py-4 rounded-xl bg-gray-900 border border-gray-700 text-white outline-none focus:border-green-500"
+      />
+
+      <button
+        className="bg-green-500 hover:bg-green-400 text-black font-bold px-8 py-4 rounded-xl transition"
+      >
+        Search
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
 </section>
 {/* Business Cards Section */}
 <section className="px-8 py-20">
@@ -203,8 +231,50 @@ export default function Home() {
     </div>
 
   </div>
-
 </section>
+{/* Footer */}
+<footer className="bg-black border-t border-gray-800 px-8 py-10">
+
+  <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+
+    {/* Logo */}
+    <div>
+
+      <h2 className="text-2xl font-bold text-green-400">
+        Business Finder
+      </h2>
+
+      <p className="text-gray-500 mt-2">
+        Discover hidden business opportunities.
+      </p>
+
+    </div>
+
+    {/* Links */}
+    <div className="flex gap-6 text-gray-400">
+
+      <a href="#" className="hover:text-green-400 transition">
+        Home
+      </a>
+
+      <a href="#" className="hover:text-green-400 transition">
+        Features
+      </a>
+
+      <a href="#" className="hover:text-green-400 transition">
+        Contact
+      </a>
+
+    </div>
+
+  </div>
+
+  {/* Bottom Line */}
+  <div className="text-center text-gray-600 mt-10 text-sm">
+    © 2026 Business Finder. All rights reserved.
+  </div>
+
+</footer>
     </main>
   );
 }
